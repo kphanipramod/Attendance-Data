@@ -4,7 +4,7 @@
 
 An organinzation's attendance tracking software produces duplicates and needs to be cleaned and analyzed for monthly individual and organizational insights.
 
-Access the Dataset [HERE](https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit?rtpof=true)
+Access the Dataset [HERE](https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit?rtpof=true).
 
 # Variables
 
