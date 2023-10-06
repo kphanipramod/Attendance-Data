@@ -10,7 +10,7 @@ Access the Dataset [Attendance](https://docs.google.com/spreadsheets/d/1ps3K_gU-
 
 There are several variables within the original dataset that had an effect on the outcome of the calculation of an employee's attendance percentage
 
-*Employee_Name*: Employee name
+*Employee_Name*: Employee name \n
 *Employee ID*: Employee's identification number
 *Date*: Date of the Absence
 *Week Number*: Week number of the year
