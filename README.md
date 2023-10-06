@@ -4,7 +4,7 @@
 
 An organinzation's attendance tracking software produces duplicates and needs to be cleaned and analyzed for monthly individual and organizational insights.
 
-Access the Dataset [HERE](https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit?rtpof=true).
+Access the Dataset [Attendance](https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit?rtpof=true).
 
 # Variables
 
@@ -84,7 +84,7 @@ FROM
  WHERE ROUND(((sub.school_days - sub.excused_abs) - sub.unexcused_Abs)/ (sub.school_days - sub.excused_abs),2) > 0
  ORDER BY sub.Employee_name, sub.Month;
 ```
-Access the Query Result here: [Individual Attendance] (https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit#gid=2062023419)
+Access the Query Result here: [Individual Attendance](https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit#gid=2062023419).
 
 ##Step 3: Calculating Campus Attendance from TEMP TABLE t1
 ```
@@ -114,7 +114,7 @@ FROM
  ORDER BY sub.Employee_name, sub.Month) AS sub1
  ORDER BY sub1.Campus, sub1.Month;
 ```
-Access the Query Result here: [Campus Attendance] (https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit#gid=941992024)
+Access the Query Result here: [Campus Attendance](https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit#gid=941992024).
 
 ##Step 4: Calculating Weighted Average of Individual Attendance from TEMP TABLE t1
 ```
@@ -145,4 +145,4 @@ Access the Query Result here: [Campus Attendance] (https://docs.google.com/sprea
  ORDER BY sub1.Employee_name, sub1.Campus
 ```
 
-Access the Query Result here: [Weighted Average] (https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit#gid=1633696768)
+Access the Query Result here: [Weighted Average](https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit#gid=1633696768).
