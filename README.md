@@ -1,13 +1,13 @@
 # Data Cleaning with SQL
-______________________________________________________________________________________________________________________________________________________________________________________________
 
 ## Abstract
-______________________________________________________________________________________________________________________________________________________________________________________________
 
-An organinzation's attendance tracking software produces duplicates and needs to be cleaned and analyzed for monthly individual and organizational insights
+An organinzation's attendance tracking software produces duplicates and needs to be cleaned and analyzed for monthly individual and organizational insights.
+
+Access the Dataset [HERE](https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit?rtpof=true)
 
 # Variables
-_______________________________________________________________________________________________________________________________________________________________________________________________
+
 There are several variables within the original dataset that had an effect on the outcome of the calculation of an employee's attendance percentage
 
 Employee_Name: Employee name
@@ -20,7 +20,7 @@ Hours: The number of hours requested off by employee
 Employee_Status: Active or Inactive
 
 #SQL Syntax
-_______________________________________________________________________________________________________________________________________________________________________________________________
+
 
 ##Step 1: Creation of TEMP TABLE with 'clean' data
 
@@ -59,7 +59,6 @@ SELECT
  WHERE Hours <> 8.75 AND Employee_Name <> 'ADMIN FA' AND  Employee_Name <> 'Academic Support' -- Filtering out the duplicate absence and irrelevant names 
  GROUP BY employee_name, Employee_ID,Absence_Type, department_name, Month, School_Days, Hours ;
 ```
-_______________________________________________________________________________________________________________________________________________________________________________________________
 
 ##Step 2: Calculating Individual Attendance from TEMP TABLE t1
 
@@ -85,7 +84,7 @@ FROM
  WHERE ROUND(((sub.school_days - sub.excused_abs) - sub.unexcused_Abs)/ (sub.school_days - sub.excused_abs),2) > 0
  ORDER BY sub.Employee_name, sub.Month;
 ```
-_______________________________________________________________________________________________________________________________________________________________________________________________
+Access the Query Result here: [Individual Attendance] (https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit#gid=2062023419)
 
 ##Step 3: Calculating Campus Attendance from TEMP TABLE t1
 ```
@@ -115,7 +114,7 @@ FROM
  ORDER BY sub.Employee_name, sub.Month) AS sub1
  ORDER BY sub1.Campus, sub1.Month;
 ```
-_______________________________________________________________________________________________________________________________________________________________________________________________
+Access the Query Result here: [Campus Attendance] (https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit#gid=941992024)
 
 ##Step 4: Calculating Weighted Average of Individual Attendance from TEMP TABLE t1
 ```
@@ -146,3 +145,4 @@ ________________________________________________________________________________
  ORDER BY sub1.Employee_name, sub1.Campus
 ```
 
+Access the Query Result here: [Weighted Average] (https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit#gid=1633696768)
