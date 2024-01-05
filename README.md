@@ -27,10 +27,10 @@ There are several variables within the original dataset that had an effect on th
 **Employee_Status**: Active or Inactive  
 
 
-#SQL Syntax
+# SQL Syntax
 
 
-##Step 1: Creation of TEMP TABLE with 'clean' data
+## Step 1: Creation of TEMP TABLE with 'clean' data
 
 ```
 /*Temp Table Creation to perfrom mulitple queries*/
@@ -68,7 +68,7 @@ SELECT
  GROUP BY employee_name, Employee_ID,Absence_Type, department_name, Month, School_Days, Hours ;
 ```
 
-##Step 2: Calculating Individual Attendance from TEMP TABLE t1
+## Step 2: Calculating Individual Attendance from TEMP TABLE t1
 
 ```
 /*Individual Attendance*/
@@ -94,7 +94,7 @@ FROM
 ```
 Access the Query Result here: [Individual Attendance](https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit#gid=2062023419).
 
-##Step 3: Calculating Campus Attendance from TEMP TABLE t1
+## Step 3: Calculating Campus Attendance from TEMP TABLE t1
 ```
 /*Campus Attendance*/
 
@@ -124,7 +124,7 @@ FROM
 ```
 Access the Query Result here: [Campus Attendance](https://docs.google.com/spreadsheets/d/1ps3K_gU-aGCUxVKPveSQiIy_B_8adnFv/edit#gid=941992024).
 
-##Step 4: Calculating Weighted Average of Individual Attendance from TEMP TABLE t1
+## Step 4: Calculating Weighted Average of Individual Attendance from TEMP TABLE t1
 ```
 
  /*Individual Attendance Summative*/ -- Weighted Average of Attendance
